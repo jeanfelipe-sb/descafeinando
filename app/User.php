@@ -31,4 +31,8 @@ class User extends Authenticatable {
     ];
     protected $dates = ['deleted_at'];
 
+    public function posts() {
+        return $this->hasMany('App\Post');
+    }
+
 }

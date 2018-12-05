@@ -59,5 +59,9 @@ return [
             'driver' => 'local',
             'root' => public_path() . '/assets/avatar',
         ],
+        'upl_capa_post' => [
+            'driver' => 'local',
+            'root' => public_path() . '/assets/capas_posts',
+        ],
     ],
 ];

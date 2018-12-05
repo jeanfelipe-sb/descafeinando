@@ -10,7 +10,7 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -19,8 +19,10 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <!-- Latest compiled and minified CSS -->
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+        @stack('scripts')
     </head>
     <body>
         <style media="screen">
@@ -104,6 +106,8 @@
                         <li class="list-group-item text-center"><h4>Posts</h4></li>
                         <li class="list-group-item"> <a href="{!! url('/painel/tags') !!}">-> Tags</a> </li>
                         <li class="list-group-item"> <a href="{!! url('/painel/categorias') !!}">-> Categorias</a> </li>
+                        <li class="list-group-item"> <a href="{!! url('/painel/posts') !!}">-> Posts</a> </li>
+                        <li class="list-group-item"> <a href="{!! url('/painel/comentarios') !!}">-> Comentários</a> </li>
 
                         @endif
                         @if(Auth::user()->level>=2)
@@ -123,7 +127,6 @@
 
         </div>
         <!-- Latest compiled and minified JavaScript -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     </body>
 </html>

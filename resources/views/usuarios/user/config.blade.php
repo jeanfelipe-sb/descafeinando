@@ -50,6 +50,7 @@
             
             <input type="file" name="avatar" id="avatar" style="display:none;">
             Salvar Alteração do Avatar ->
+            
             <button type="submit" name="button" class="btn btn-success"> <span class="glyphicon glyphicon-floppy-disk"></span> </button>
         </form>
     </div>

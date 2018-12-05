@@ -86,7 +86,6 @@ class UserController extends Controller {
                 $request->validate([
                     'avatar' => 'required',
                 ]);
-
                 Storage::disk('upl_avatar')->put('avatar_' . Auth::user()->id . '.png', file_get_contents($request->file('avatar')));
                 $user = Auth::user();
                 $user->avatar = url('assets/avatar/' . 'avatar_' . Auth::user()->id . '.png');

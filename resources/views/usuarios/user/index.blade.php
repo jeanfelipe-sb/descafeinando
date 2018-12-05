@@ -56,6 +56,7 @@
                     <td>
                         @if(!$user->deleted_at)
                         <form action="{{ route('users.destroy' , $user->id)}}" method="POST">
+                            {!! method_field('DELETE')!!}                    
                             {{ csrf_field() }}
                             <button type="submit" class="btn btn-danger">Deletar</button>
                         </form>
